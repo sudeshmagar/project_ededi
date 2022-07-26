@@ -1,5 +1,4 @@
 import React from "react";
-
 import logo from './assets/images/ededi_new.png';
 import Forums from "./pages/Forums";
 import Topics from "./pages/Topics";
@@ -52,7 +51,7 @@ function App() {
             </section>
             <section className='border-l flex flex-col items-center w-1/3 h-min-screen mt-5 relative'>
               <div className='right-aside sticky top-24 w-[90%]'>
-                <div className='card bg-slate-300  rounded p-8 w-[90%] flex flex-col items-center pt-16'>
+                <div className='card bg-slate-100  rounded p-8 w-[90%] flex flex-col items-center pt-16'>
                   <div className='card-body'>
                     <h2 className='pb-5 font-semibold text-lg'>Recent Topics</h2>
                     <ul>

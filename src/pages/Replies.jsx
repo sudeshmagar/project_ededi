@@ -1,5 +1,7 @@
 import React from "react";
-import { ChatAlt2Icon, ChatIcon } from '@heroicons/react/outline';
+import { ThumbUpIcon, ThumbDownIcon } from '@heroicons/react/outline';
+import avatar from '../assets/images/avatar.jpg';
+import '../App.css';
 
 function Replies() {
     return (
@@ -7,131 +9,79 @@ function Replies() {
             <div className='breadcrumb pb-2 border-b'>
                 <a href='#' className='mr-5 text-blue-500'>Forums &gt; Programming Comm &gt; How do you print duplicate characters from a string?</a>
             </div>
-            <div className="rounded-2xl border-blue-500 border-t-2 mb-5 p-5 drop-shadow-lg mt-5">
+            <div className="rounded-2xl border-t-blue-500 border-b-slate-100 border-b border-t-2 mb-5 p-5 bg-white drop-shadow-sm mt-5">
                 <p>This forum has 14 topics, 81 replies, and was last updated 6 days, 2 hours ago by John Doe.</p>
             </div>
             <div className='list text-center'>
-                <ul className='list-inside'>
-                    <li>
-                        <ul className='flex justify-between border-b'>
-                            <li className='w-1/2 pl-12 text-left p-2'>Topics</li>
-                            <li className='w-[10%] p-2'>Voices</li>
-                            <li className='w-[10%] p-2'>Posts</li>
-                            <li className='w-[20%] p-2'>Last Post</li>
-                        </ul>
+                <ul className='list-inside border-t'>
+                    <li className='py-5 w-full border-b border-b-slate-100  flex justify-between align-middle'>
+                        <div className="items-start comment flex">
+                            <div className="avatar-details flex flex-col w-32">
+                                <a href="#" title="View Profile" className="m-auto">
+                                    <img src={avatar} alt="Avatar" className="rounded-full h-20" />
+                                    <span>Username</span>
+                                </a>
+                                <div className="role text-xs font-light italic">Participant</div>
+                            </div>
+                            <div className="bg-slate-100 p-4 ml-7 rounded-lg w-full relative comment-dialog">
+                                <p className="text-left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, consequuntur ad? Hic tempora vitae sunt veritatis repellendus et repudiandae commodi adipisci. Asperiores dolor suscipit accusantium? A, tempora! Dolore, sapiente laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde sunt fugit nostrum, accusamus in ut sint id dolorem, officia culpa neque. Nobis vitae cumque porro temporibus, beatae maiores modi.</p>
+                            </div>
+                            <div className="flex flex-col items-center ml-2">
+                                <ThumbUpIcon className="w-5 hover:cursor-pointer hover:text-blue-500" />
+                                <span className="counter">15</span>
+                                <ThumbDownIcon className="w-5 hover:cursor-pointer hover:text-red-500" />
+                            </div>
+                        </div>
+
                     </li>
-                    <li className='py-3'>
-                        <ul className='flex justify-between items-center'>
-                            <li className='w-1/2 text-left flex items-center'>
-                                <span className='inline-flex left-0 p-3 bg-indigo-50 rounded-md mr-2'>
-                                    <ChatIcon className='w-3 h-3 text-indigo-600' />
-                                </span>
-                                <div className='content'>
-                                    <h2 className='text-lg font-medium pt-2 pb-2'><a href='#' className='text-blue-500'>How do you print duplicate characters from a string?</a></h2>
-                                    <p className='text-sm w-fit'>
-                                        Started by <a href="#">@Username</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className='w-[10%]'>4</li>
-                            <li className='w-[10%]'>5</li>
-                            <li className='w-[20%]'><p><a href="#">@user</a></p>
-                                <p>3 day ago</p></li>
-                        </ul>
+                    <li className='py-5 w-full border-b border-b-slate-100  flex justify-between align-middle'>
+                        <div className="items-start comment flex">
+                            <div className="avatar-details flex flex-col w-32">
+                                <a href="#" title="View Profile" className="m-auto">
+                                    <img src={avatar} alt="Avatar" className="rounded-full h-20" />
+                                    <span>Username</span>
+                                </a>
+                                <div className="role text-xs font-light italic">Participant</div>
+                            </div>
+                            <div className="bg-slate-100 p-4 ml-7 rounded-lg w-full relative comment-dialog">
+                                <p className="text-left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, consequuntur ad? Hic tempora vitae sunt veritatis repellendus et repudiandae commodi adipisci. Asperiores dolor suscipit accusantium? A, tempora! Dolore, sapiente laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde sunt fugit nostrum, accusamus in ut sint id dolorem, officia culpa neque. Nobis vitae cumque porro temporibus, beatae maiores modi.</p>
+                            </div>
+                            <div className="flex flex-col items-center ml-2">
+                                <ThumbUpIcon className="w-5 hover:cursor-pointer hover:text-blue-500" />
+                                <span className="counter">15</span>
+                                <ThumbDownIcon className="w-5 hover:cursor-pointer hover:text-red-500" />
+                            </div>
+                        </div>
+
+                    </li>
+                    <li className='py-5 w-full border-b border-b-slate-100  flex justify-between align-middle'>
+                        <div className="items-start comment flex">
+                            <div className="avatar-details flex flex-col w-32">
+                                <a href="#" title="View Profile" className="m-auto">
+                                    <img src={avatar} alt="Avatar" className="rounded-full h-20" />
+                                    <span>Username</span>
+                                </a>
+                                <div className="role text-xs font-light italic">Participant</div>
+                            </div>
+                            <div className="bg-slate-100 p-4 ml-7 rounded-lg w-full relative comment-dialog">
+                                <p className="text-left">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora, consequuntur ad? Hic tempora vitae sunt veritatis repellendus et repudiandae commodi adipisci. Asperiores dolor suscipit accusantium? A, tempora! Dolore, sapiente laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde sunt fugit nostrum, accusamus in ut sint id dolorem, officia culpa neque. Nobis vitae cumque porro temporibus, beatae maiores modi.</p>
+                            </div>
+                            <div className="flex flex-col items-center ml-2">
+                                <ThumbUpIcon className="w-5 hover:cursor-pointer hover:text-blue-500" />
+                                <span className="counter">15</span>
+                                <ThumbDownIcon className="w-5 hover:cursor-pointer hover:text-red-500" />
+                            </div>
+                        </div>
+
                     </li>
 
-                    <li className='py-3'>
-                        <ul className='flex justify-between items-center'>
-                            <li className='w-1/2 text-left flex items-center'>
-                                <span className='inline-flex left-0 p-3 bg-indigo-50 rounded-md mr-2'>
-                                    <ChatIcon className='w-3 h-3 text-indigo-600' />
-                                </span>
-                                <div className='content'>
-                                    <h2 className='text-lg font-medium pt-2 pb-2'><a href='#' className='text-blue-500'>How do you print duplicate characters from a string?</a></h2>
-                                    <p className='text-sm w-fit'>
-                                        Started by <a href="#">@Username</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className='w-[10%]'>4</li>
-                            <li className='w-[10%]'>5</li>
-                            <li className='w-[20%]'><p><a href="#">@user</a></p>
-                                <p>3 day ago</p></li>
-                        </ul>
-                    </li><li className='py-3'>
-                        <ul className='flex justify-between items-center'>
-                            <li className='w-1/2 text-left flex items-center'>
-                                <span className='inline-flex left-0 p-3 bg-indigo-50 rounded-md mr-2'>
-                                    <ChatIcon className='w-3 h-3 text-indigo-600' />
-                                </span>
-                                <div className='content'>
-                                    <h2 className='text-lg font-medium pt-2 pb-2'><a href='#' className='text-blue-500'>How do you print duplicate characters from a string?</a></h2>
-                                    <p className='text-sm w-fit'>
-                                        Started by <a href="#">@Username</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className='w-[10%]'>4</li>
-                            <li className='w-[10%]'>5</li>
-                            <li className='w-[20%]'><p><a href="#">@user</a></p>
-                                <p>3 day ago</p></li>
-                        </ul>
-                    </li><li className='py-3'>
-                        <ul className='flex justify-between items-center'>
-                            <li className='w-1/2 text-left flex items-center'>
-                                <span className='inline-flex left-0 p-3 bg-indigo-50 rounded-md mr-2'>
-                                    <ChatIcon className='w-3 h-3 text-indigo-600' />
-                                </span>
-                                <div className='content'>
-                                    <h2 className='text-lg font-medium pt-2 pb-2'><a href='#' className='text-blue-500'>How do you print duplicate characters from a string?</a></h2>
-                                    <p className='text-sm w-fit'>
-                                        Started by <a href="#">@Username</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className='w-[10%]'>4</li>
-                            <li className='w-[10%]'>5</li>
-                            <li className='w-[20%]'><p><a href="#">@user</a></p>
-                                <p>3 day ago</p></li>
-                        </ul>
-                    </li><li className='py-3'>
-                        <ul className='flex justify-between items-center'>
-                            <li className='w-1/2 text-left flex items-center'>
-                                <span className='inline-flex left-0 p-3 bg-indigo-50 rounded-md mr-2'>
-                                    <ChatIcon className='w-3 h-3 text-indigo-600' />
-                                </span>
-                                <div className='content'>
-                                    <h2 className='text-lg font-medium pt-2 pb-2'><a href='#' className='text-blue-500'>How do you print duplicate characters from a string?</a></h2>
-                                    <p className='text-sm w-fit'>
-                                        Started by <a href="#">@Username</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className='w-[10%]'>4</li>
-                            <li className='w-[10%]'>5</li>
-                            <li className='w-[20%]'><p><a href="#">@user</a></p>
-                                <p>3 day ago</p></li>
-                        </ul>
-                    </li><li className='py-3'>
-                        <ul className='flex justify-between items-center'>
-                            <li className='w-1/2 text-left flex items-center'>
-                                <span className='inline-flex left-0 p-3 bg-indigo-50 rounded-md mr-2'>
-                                    <ChatIcon className='w-3 h-3 text-indigo-600' />
-                                </span>
-                                <div className='content'>
-                                    <h2 className='text-lg font-medium pt-2 pb-2'><a href='#' className='text-blue-500'>How do you print duplicate characters from a string?</a></h2>
-                                    <p className='text-sm w-fit'>
-                                        Started by <a href="#">@Username</a>
-                                    </p>
-                                </div>
-                            </li>
-                            <li className='w-[10%]'>4</li>
-                            <li className='w-[10%]'>5</li>
-                            <li className='w-[20%]'><p><a href="#">@user</a></p>
-                                <p>3 day ago</p></li>
-                        </ul>
-                    </li>
                 </ul>
+            </div>
+            <div className="comment-box">
+                <div className="rounded-2xl border-t-blue-500 border-b-slate-100 border-b border-t-2 mb-5 p-5 bg-white drop-shadow-sm mt-5">
+                    <p>You must be logged in to reply to this topic.</p>
+                </div>
+                <textarea></textarea>
             </div>
         </>
     );
