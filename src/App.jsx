@@ -8,6 +8,13 @@ import ProfileCard from "./components/profile_card";
 import LoginCard from "./components/login_card";
 import { GlobalContext } from "./context/Provider";
 import "./App.css";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Outlet,
+  Navigate,
+} from "react-router-dom";
 
 function App() {
   const { loginState } = useContext(GlobalContext);
@@ -42,13 +49,17 @@ function App() {
           <Nav userInfo={loginState} />
           <article className="content w-full h-100 mt-[71px] flex flex-row dark:text-slate-400">
             <section className=" h-full w-2/3 p-20 mt-5">
-              {/* <Forums /> */}
-              {/* <Topics /> */}
-              <Replies />
+              <BrowserRouter>
+                <Routes>
+                  <Route path="/" element={<Forums />} />
+                  <Route path="/topics/:id" element={<Topics />} />
+                  <Route path="/posts" element={<Replies />} />
+                </Routes>
+              </BrowserRouter>
             </section>
             <section className="border-l flex flex-col items-center w-1/3 h-min-screen mt-5 relative">
               <div className="right-aside sticky top-24 w-[90%]">
-                <div className="card bg-slate-300  rounded p-8 w-[90%] flex flex-col items-center pt-16">
+                <div className="card bg-slate-100  rounded p-8 w-[90%] flex flex-col items-center pt-16">
                   <div className="card-body">
                     <h2 className="pb-5 font-semibold text-lg">
                       Recent Topics
